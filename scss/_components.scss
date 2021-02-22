@@ -86,6 +86,8 @@
     }
     a {
       color: $color-text-black;
+      font-weight: 700;
+      line-height: 15px;
       @media screen and (max-width: $mobile) {
         color: $color-blue-primary;
       }
@@ -315,8 +317,19 @@
       }
     }
   }
+  div[class^='col-'] {
+    &:nth-of-type(2), &:nth-of-type(3) {
+      .services-main--item {
+        padding-top: 19px;
+        @media screen and (max-width: $mobile) {
+          padding: 0;
+        }
+      }
+    }
+  }
   &--item {
     text-align: center;
+    height: 100%;
     &__description {
       font-size: 20px;
       line-height: 32px;
@@ -365,6 +378,7 @@
     &__title {
       font-size: 35px;
       line-height: 56px;
+      font-weight: 700;
       color: $color-blue-primary;
       margin: 0 0 64px;
       @media screen and (max-width: $mobile) {

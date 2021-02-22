@@ -93,6 +93,7 @@ select {
 input[type="checkbox"] {
   cursor: pointer;
   position: relative;
+  @include translate(2px, 0);
   &:after {
     position: absolute;
     width: 25px;
@@ -101,7 +102,7 @@ input[type="checkbox"] {
     border-radius: 5px;
     content: '';
     top: 50%;
-    left: 0;
+    left: -2px;
     @include translate(0, -50%);
     background-color: $color-white-primary;
   }
