@@ -37,7 +37,7 @@ body {
       color: $color-blue-primary;
     }
     &--small {
-      padding: 0 30px;
+      width: 100%;
       height: 39px;
       font-size: 15px;
       line-height: 15px;
@@ -124,6 +124,9 @@ label {
 }
 
 .container {
+  @media screen and (min-width: 1200px){
+    max-width: 1024px;
+  }
   @media screen and (max-width: $mobile) {
     padding: 0 25px;
   }
