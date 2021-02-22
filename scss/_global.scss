@@ -1,0 +1,136 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 15px;
+  color: $color-black-primary;
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+// Button
+.button {
+  &-primary {
+    outline: none;
+    border: 0;
+    color: $color-white-primary;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 50px;
+    &--orange {
+      background-color: $color-orange;
+    }
+    &--blue {
+      background-color: $color-blue-primary;
+      color: $color-white-primary;
+      &:hover {
+        color: $color-white-primary;
+      }
+    }
+    &--white {
+      background-color: $color-white-primary;
+      color: $color-blue-primary;
+    }
+    &--small {
+      padding: 0 30px;
+      height: 39px;
+      font-size: 15px;
+      line-height: 15px;
+      @media screen and (max-width: $tablet) {
+        font-size: 11px;
+      }
+    }
+    &--large {
+      padding: 0 65px;
+      height: 62px;
+      font-size: 18px;
+      line-height: 26.06px;
+      @media screen and (max-width: $mobile) {
+        height: 56px;
+        font-size: 16px;
+        padding: 0 30px;
+        line-height: 23.17px;
+      }
+    }
+  }
+}
+
+// Input
+.form-control {
+  border: 2px solid #4EA3DB;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 19.5px;
+}
+
+input {
+  &.form-control {
+    height: 40px;
+  }
+}
+select {
+  cursor: pointer;
+  &::-ms-expand { display: none; }
+  &.form-control {
+    height: 40px;
+    padding-left: 94px;
+    position: relative;
+    background-image: url("../dist/images/icon-arrow-down.svg");
+    background-position: 10px center;
+    background-size: unset;
+    background-repeat: no-repeat;
+    background-color: $color-white-primary;
+  }
+}
+
+// Checkbox
+input[type="checkbox"] {
+  cursor: pointer;
+  position: relative;
+  &:after {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 2px solid $color-blue-primary;
+    border-radius: 5px;
+    content: '';
+    top: 50%;
+    left: 0;
+    @include translate(0, -50%);
+    background-color: $color-white-primary;
+  }
+  &:checked {
+    &:after {
+      background-color: $color-blue-primary;
+      content: '\2713';
+      color: $color-white-primary;
+      text-align: center;
+    }
+  }
+}
+
+// Label
+label {
+  font-size: 16px;
+  line-height: 19.5px;
+  font-weight: 700;
+}
+
+.container {
+  @media screen and (max-width: $mobile) {
+    padding: 0 25px;
+  }
+}
+
+.back-toppage {
+  margin: 65px auto 0;
+  @media screen and (max-width: $mobile) {
+    margin: 40px auto 0;
+  }
+}

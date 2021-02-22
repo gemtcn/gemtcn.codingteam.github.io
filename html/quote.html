@@ -1,0 +1,162 @@
+<html lang="ja">
+
+<head>
+  <title>Coding Team</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link css -->
+  <link rel="stylesheet" href="../dist/css/style.min.css" type="text/css">
+  <!-- Link js -->
+  <script defer src="../dist/js/main.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <header class="header-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-3 d-flex justify-content-center align-items-center header-main--logo__mb">
+          <h1 class="header-main--logo">
+            <a href="#">
+              <img src="../dist/images/logo.png" alt="">
+            </a>
+          </h1>
+          <button type="button" class="header-main--button d-block d-sm-none" id="showMobileMenu">
+            <img src="../dist/images/icon-menu.png" alt="">
+          </button>
+        </div>
+        <div class="header-main--menu col-12 col-sm-7">
+          <a href="#" class="d-block d-sm-none"><img src="../dist/images/logo.png" alt=""></a>
+          <button type="button" class="d-block d-sm-none" id="hideMobileMenu">
+            <img src="../dist/images/icon-menu-close.svg" alt="">
+          </button>
+          <ul class="header-main--menu__list">
+            <li><a href="#">ホーム</a></li>
+            <li><a href="#">料金・サービス</a></li>
+            <li><a href="#">発注から納品まで</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+          <ul class="header-main--menu__mb d-block d-sm-none">
+            <li><a href="#">会社概要</a></li>
+            <li><a href="#">利用規約</a></li>
+            <li><a href="#">プライバシーポリシー</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div class="col-2 d-flex justify-content-end d-none d-sm-block">
+          <button class="button-primary button-primary--orange button-primary--small">簡単お見積り</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="breadcrumb-main">
+    <div class="container">
+      <h2 class="breadcrumb-main--title">お見積り</h2>
+    </div>
+  </section>
+  <section class="quote-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-10 offset-sm-1">
+          <div class="quotation-form--detail quotation-form--detail__nomargin">
+            <h4 class="quotation-form--detail__title text-center">さっそく、お見積り</h4>
+            <form action="">
+              <div class="form-group">
+                <label for="number-page">ページ数</label>
+                <div class="quotation-form--detail__right">
+                  <input type="text" class="form-control" placeholder="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="number-page--3000">うち3000px以上のページの数</label>
+                <div class="quotation-form--detail__right">
+                  <input type="text" class="form-control" placeholder="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="support">レスポンシブ対応</label>
+                <div class="quotation-form--detail__right">
+                  <select name="support" id="" class="form-control">
+                    <option value="1">対応する</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="wordpress">WordPress対応</label>
+                <div class="quotation-form--detail__right">
+                  <select name="wordpress" id="" class="form-control">
+                    <option value="1">対応する</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group justify-content-end">
+                <div class="quotation-form--detail__right">
+                  <input type="checkbox" id="customPost">
+                  <label for="customPost">カスタム投稿タイプ</label>
+                </div>
+              </div>
+              <div class="form-group justify-content-end">
+                <div class="quotation-form--detail__right">
+                  <input type="checkbox" id="wpNav">
+                  <label for="wpNav">wp_nav_menu</label>
+                </div>
+              </div>
+              <div class="form-group justify-content-end">
+                <div class="quotation-form--detail__right">
+                  <input type="checkbox" id="customField">
+                  <label for="customField">カスタムフィールド</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="request-template">お問い合わせフォーム数</label>
+                <div class="quotation-form--detail__right">
+                  <input type="text" class="form-control" placeholder="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="designTool">Figma or XDを使用</label>
+                <div class="quotation-form--detail__right">
+                  <select name="" id="" class="form-control">
+                    <option value="1">対応する</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group justify-content-end">
+                <div class="quotation-form--detail__right">
+                  <input type="checkbox" id="gridSystem">
+                  <label for="gridSystem">Gridレイアウトを使用</label>
+                </div>
+              </div>
+              <div class="button-group d-flex justify-content-center">
+                <button class="button-primary button-primary--orange button-primary--large">見積もり結果を見る</button>
+              </div>
+            </form>
+          </div>
+          <div class="text-center d-flex">
+            <a href="#" class="back-toppage button-primary button-primary--blue button-primary--large">トップページへ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-2">
+          <h2><a href="#"><img src="../dist/images/logo-footer.png" alt=""></a></h2>
+        </div>
+        <div class="col-12 col-sm-10 d-sm-flex justify-content-end d-none">
+          <ul class="footer-main__menu">
+            <li><a href="#">ホーム</a></li>
+            <li><a href="#">会社概要</a></li>
+            <li><a href="#">利用規約</a></li>
+            <li><a href="#">プライバシーポリシー</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

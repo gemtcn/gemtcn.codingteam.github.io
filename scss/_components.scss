@@ -1,0 +1,630 @@
+// Header
+.header-main {
+  background-color: $color-white-primary;
+  padding: 12px 0;
+  @media screen and (max-width: $mobile) {
+    padding: 0;
+    &--logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include translate(-50%, -50%);
+    }
+    .header-main--logo__mb {
+      height: 60px;
+      position: relative;
+      button {
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        @include translate(0, -50%);
+      }
+    }
+  }
+  &--button {
+    border: 0;
+    background-color: $color-white-primary;
+    padding: 0;
+  }
+  &--menu {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: $mobile) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 999;
+      padding: 60px 0;
+      background-color: $color-white-primary;
+      flex-direction: column;
+      display: none;
+      &.show {
+        display: flex;
+      }
+      &__mb {
+        text-align: center;
+        a {
+          font-size: 16px;
+          line-height: 31px;
+        }
+      }
+      button {
+        padding: 0;
+        border: 0;
+        position: absolute;
+        top: 21px;
+        right: 19px;
+        background-color: $color-white-primary;
+      }
+    }
+    &__list {
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: $mobile) {
+        margin: 24px 0 48px;
+        flex-direction: column;
+        a {
+          font-size: 25px;
+          line-height: 43px;
+          font-weight: 700;
+        }
+      }
+    }
+    li {
+      margin: 0 40px 0 0;
+      @media screen and (max-width: $tablet) {
+        margin: 0 30px 0 0;
+      }
+      @media screen and (max-width: $mobile) {
+        margin: 0;
+      }
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+    a {
+      color: $color-text-black;
+      @media screen and (max-width: $mobile) {
+        color: $color-blue-primary;
+      }
+      &:hover {
+        color: $color-blue-primary;
+      }
+    }
+  }
+}
+
+// Banner
+.banner-main {
+  background: url("../dist/images/image-backgroud-banner.png") center;
+  background-size: cover;
+  padding: 174px 0 172px;
+  @media screen and (max-width: $mobile) {
+    padding: 125px 0 201px;
+  }
+  p {
+    font-size: 40px;
+    line-height: 61px;
+    font-weight: 700;
+    color: $color-white-primary;
+    margin: 0 0 42px;
+    @media screen and (max-width: $mobile) {
+      font-size: 25px;
+      line-height: 43px;
+      margin: 0 0 30px;
+    }
+  }
+  button {
+    @media screen and (max-width: $mobile) {
+      margin: 0 auto;
+    }
+  }
+}
+
+// Cost information
+.cost-information {
+  padding: 46px 0;
+  @media screen and (max-width: $mobile) {
+    padding: 46px 0 27px;
+    .row {
+      flex-direction: column-reverse;
+    }
+  }
+  &--title {
+    font-size: 35px;
+    line-height: 56px;
+    font-weight: 700;
+    margin: 0 0 43px 0;
+    @media screen and (max-width: $mobile) {
+      text-align: center;
+      margin: 45px 0 15px;
+    }
+  }
+  &--description {
+    line-height: 33px;
+  }
+  &--detail {
+    font-size: 13px;
+    line-height: 15px;
+    border: 20px solid $color-blue-primary;
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    padding: 54px 24px 55px;
+    &__subpage {
+      padding: 35px 69px 47px;
+      @media screen and (max-width: $tablet) {
+        padding: 35px 40px 47px;
+      }
+      @media screen and (max-width: $mobile) {
+        padding: 30px 19px 30px;
+      }
+      .cost-information--detail__list {
+        padding: 0 0 49px;
+        margin: 0 0 22px;
+        li {
+          margin-bottom: 29px;
+          @media screen and (max-width: $mobile) {
+            margin-bottom: 20px;
+          }
+        }
+        &:first-of-type {
+          li {
+            &:first-of-type {
+              border: 0;
+              padding: 0;
+            }
+          }
+        }
+        span {
+          font-size: 18px;
+          line-height: 18px;
+          @media screen and (max-width: $tablet) {
+            font-size: 14px;
+            line-height: 14px;
+          }
+          @media screen and (max-width: $mobile) {
+            font-size: 13px;
+            line-height: 15px;
+          }
+        }
+        .cost-number {
+          font-size: 30px;
+          line-height: 30px;
+          @media screen and (max-width: $mobile) {
+            margin-left: 10px;
+          }
+        }
+        .cost-information--detail__label {
+          font-size: 15px;
+          line-height: 15px;
+          margin: 0 0 3px 2px;
+          flex-shrink: 0;
+          @media screen and (max-width: $mobile) {
+            font-size: 15px;
+            line-height: 15px;
+          }
+        }
+        &:last-of-type {
+          li {
+            padding-left: 90px;
+            @media screen and (max-width: $tablet) {
+              padding: 0;
+            }
+            @media screen and (max-width: $mobile) {
+              padding: 0;
+            }
+            &:first-of-type,
+            &:nth-of-type(2),
+            &:nth-of-type(3),
+            &:last-of-type {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+    &__toppage {
+      margin: -174px 0 0;
+      background-color: $color-white-primary;
+      @media screen and (max-width: $mobile) {
+        margin: -220px 0 0;
+      }
+    }
+    &__title {
+      font-size: 35px;
+      line-height: 56px;
+      margin: 0 0 20px;
+      color: $color-blue-primary;
+      @media screen and (max-width: $mobile) {
+        font-size: 25px;
+        line-height: 40px;
+        margin: 0 0 14px;
+      }
+    }
+    &__description {
+      line-height: 24px;
+      margin: 0 0 31px;
+      color: $color-text-black;
+      @media screen and (max-width: $mobile) {
+        font-size: 15px;
+        font-weight: 400 !important;
+      }
+    }
+    * {
+      font-weight: 700;
+      vertical-align: middle;
+      padding: 0;
+    }
+    .cost-number {
+      font-size: 30px;
+      line-height: 1;
+    }
+    &__list {
+      padding: 0 0 23px;
+      margin: 0 0 21px;
+      border-bottom: 1px solid #eee;
+      &:first-of-type {
+        li {
+          &:first-of-type {
+            border-bottom: 1px solid #eee;
+            padding: 0 0 24px;
+          }
+        }
+      }
+      &:last-of-type {
+        padding: 0;
+        margin: 0;
+        border: 0;
+      }
+      span {
+        font-size: 13px;
+        line-height: 15px;
+        display: inline-block;
+      }
+      p {
+        display: flex;
+        align-items: flex-end;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 0 19px;
+        &:last-of-type {
+          margin: 0;
+        }
+      }
+    }
+  }
+  &--subpage {
+    padding: 78px 0 65px;
+  }
+}
+
+// Services main
+.services-main {
+  padding: 64px 0 350px;
+  @media screen and (max-width: $mobile) {
+    padding: 0 0 350px;
+    div[class^="col-"] {
+      margin: 0 0 47px;
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+  &--item {
+    text-align: center;
+    &__description {
+      font-size: 20px;
+      line-height: 32px;
+      font-weight: 700;
+      margin: 29px 0 0;
+      @media screen and (max-width: $mobile) {
+        margin: 27px 0 0;
+      }
+    }
+    img {
+      @media screen and (max-width: $tablet) {
+        max-width: 100%;
+        width: auto;
+        max-height: 150px;
+      }
+      @media screen and (max-width: $mobile) {
+        max-width: 100%;
+        width: auto;
+        max-height: unset;
+      }
+    }
+  }
+}
+
+// Quotation form
+.quotation-form {
+  background: url("../dist/images/images-background-quotation.png");
+  background-size: cover;
+  padding: 0 0 138px;
+  &--detail {
+    border: 20px solid $color-blue-primary;
+    border-radius: 50px;
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.25);
+    background-color: $color-white-primary;
+    padding: 35px 66px;
+    margin: -250px 0 0;
+    &__nomargin {
+      margin: 0;
+    }
+    @media screen and (max-width: $tablet) {
+      padding: 45px 31px 25px;
+    }
+    @media screen and (max-width: $mobile) {
+      padding: 45px 30px 25px;
+    }
+    &__title {
+      font-size: 35px;
+      line-height: 56px;
+      color: $color-blue-primary;
+      margin: 0 0 64px;
+      @media screen and (max-width: $mobile) {
+        font-size: 25px;
+        line-height: 40px;
+        margin: 0 0 25px;
+      }
+    }
+    &__right {
+      max-width: 240px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: $mobile) {
+        max-width: 100%;
+      }
+      label {
+        font-weight: 400;
+        margin: 0 0 0 26px;
+        cursor: pointer;
+        @media screen and (max-width: $mobile) {
+          margin: 0 0 0 20px !important;
+        }
+      }
+    }
+    .form {
+      &-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 28px;
+        @media screen and (max-width: $mobile) {
+          flex-direction: column;
+          align-items: flex-start;
+          margin: 0 0 24px;
+        }
+        &.has-textarea {
+          align-items: flex-start;
+          > label {
+            margin-top: 10px;
+          }
+        }
+        &.has-space-before {
+          margin-top: 230px;
+          @media screen and (max-width: $mobile) {
+            margin-top: 70px;
+          }
+        }
+        &.flex-row-mb {
+          @media screen and (max-width: $mobile) {
+            flex-direction: row;
+            label {
+              margin: 0;
+            }
+            .quotation-form--detail__right {
+              width: auto;
+            }
+          }
+        }
+        label {
+          @media screen and (max-width: $mobile) {
+            margin: 0 0 9px;
+          }
+        }
+        &:last-of-type {
+          margin: 0;
+        }
+      }
+    }
+    .button-group {
+      margin: 63px 0 0;
+    }
+  }
+}
+
+// Footer
+.footer-main {
+  background-color: $color-blue-secondary;
+  padding: 102px 0 103px;
+  @media screen and (max-width: $mobile) {
+    padding: 100px 0;
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    li {
+      margin: 0 40px 0 0;
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+    a {
+      color: $color-white-primary;
+      line-height: 15px;
+    }
+  }
+  h2 {
+    @media screen and (max-width: $mobile) {
+      text-align: center;
+    }
+  }
+}
+
+// Breadcrumb
+.breadcrumb-main {
+  padding: 137px 0;
+  background: url("../dist/images/image-background-breadcrumb.png") center;
+  background-size: cover;
+  @media screen and (max-width: $mobile) {
+    padding: 102px 0;
+  }
+  &--title {
+    font-size: 40px;
+    line-height: 46px;
+    text-align: center;
+    color: $color-white-primary;
+    font-weight: 700;
+    text-transform: uppercase;
+    @media screen and (max-width: $mobile) {
+      font-size: 25px;
+    }
+  }
+}
+
+// Flow page
+.flow-main {
+  padding: 78px 0;
+  &--step {
+    background: $color-white-primary;
+    border: 20px solid $color-blue-primary;
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    padding: 35px 69px 39px;
+    position: relative;
+    margin: 0 0 66px;
+    @media screen and (max-width: $mobile) {
+      padding: 30px 19px;
+    }
+    &__title {
+      font-size: 35px;
+      line-height: 56px;
+      color: $color-blue-primary;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: 700;
+      @media screen and (max-width: $mobile) {
+        font-size: 25px;
+        line-height: 40px;
+      }
+    }
+    &__numb {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      font-size: 80px;
+      line-height: 1;
+      font-weight: 700;
+      color: $color-blue-primary;
+      @media screen and (max-width: $mobile) {
+        font-size: 60px;
+      }
+    }
+    &__description {
+      font-size: 15px;
+      line-height: 24px;
+      color: $color-text-black;
+    }
+    &:before {
+      position: absolute;
+      top: calc(100% + 20px);
+      left: 0;
+      width: 100%;
+      height: 66px;
+      content: '';
+      background-image: url("../dist/images/icon-arrow-down__large.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &:last-of-type {
+      margin: 0;
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+// FAQ
+.faq-main {
+  padding: 78px 0 80px;
+  &--item {
+    background: $color-white-primary;
+    border: 20px solid $color-blue-primary;
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    padding: 0 132px 51px 156px;
+    @media screen and (max-width: $tablet) {
+      padding: 20px 50px 51px 50px;
+    }
+    @media screen and (max-width: $mobile) {
+      padding: 20px 15px 20px 19px;
+    }
+    &__question {
+      display: flex;
+      align-items: center;
+      margin: 0 0 14px;
+      span, p {
+        color: $color-blue-primary;
+      }
+      span {
+        font-size: 80px;
+        line-height: 128px;
+        margin: 0 30px 0 0;
+        flex-shrink: 0;
+        text-transform: uppercase;
+        font-weight: 700;
+        @media screen and (max-width: $mobile) {
+          font-size: 60px;
+          line-height: 1;
+          margin: 0 20px 0 0;
+          align-self: flex-start;
+        }
+      }
+      p {
+        font-size: 25px;
+        line-height: 40px;
+        font-weight: 700;
+      }
+    }
+    &__anwser {
+      display: flex;
+      span {
+        font-size: 80px;
+        line-height: 0.8;
+        margin: 0 35px 0 0;
+        flex-shrink: 0;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $color-orange;
+        @media screen and (max-width: $mobile) {
+          font-size: 60px;
+          line-height: 1;
+          margin: 0 20px 0 0;
+          align-self: flex-start;
+        }
+      }
+      p {
+        font-size: 20px;
+        line-height: 32px;
+        color: $color-text-black;
+        @media screen and (max-width: $mobile) {
+          font-size: 15px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+// Quote
+.quote-main {
+  padding: 73px 0;
+}

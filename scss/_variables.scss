@@ -1,0 +1,28 @@
+// Color
+$color-blue-primary: #4ea3db;
+$color-blue-secondary: #347cc6;
+$color-orange: #db704e;
+$color-black-primary: #000;
+$color-white-primary: #fff;
+$color-text-black: #3e3e3e;
+
+// Media query
+$mobile: 480px;
+$tablet: 1024px;
+
+// Mixin
+@mixin translate($x, $y...) {
+  transform: translate($x, $y);
+  -webkit-transform: translate($x, $y);
+  -moz-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+}
+
+@mixin transition {
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
