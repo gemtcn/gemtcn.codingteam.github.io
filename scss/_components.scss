@@ -249,6 +249,7 @@
       line-height: 24px;
       margin: 0 0 31px;
       color: $color-text-black;
+      flex-shrink: 1;
       @media screen and (max-width: $mobile) {
         font-size: 15px;
         font-weight: 400 !important;
@@ -288,6 +289,10 @@
       p {
         display: flex;
         align-items: flex-end;
+        flex-shrink: 0;
+      }
+      .cost-information--detail__description {
+        flex-shrink: 1;
       }
       li {
         display: flex;
@@ -527,6 +532,8 @@
       @media screen and (max-width: $mobile) {
         font-size: 25px;
         line-height: 40px;
+        display: flex;
+        align-items: center;
       }
     }
     &__numb {
@@ -539,6 +546,8 @@
       color: $color-blue-primary;
       @media screen and (max-width: $mobile) {
         font-size: 60px;
+        position: static;
+        margin: 0 10px 0 0;
       }
     }
     &__description {
